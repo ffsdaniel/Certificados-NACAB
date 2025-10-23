@@ -1,34 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Documento</title>
-  <style>
-    :root{--bg:#ffffff;--muted:#6b7280}
-    html,body{height:100%;margin:0}
-    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;background:var(--bg);color:#111}
-    .holder{display:flex;flex-direction:column;height:100%}
-    .topbar{display:flex;justify-content:flex-end;gap:8px;padding:10px;background:#f8fafc;border-bottom:1px solid #eef2f7}
-    .btn{background:#111;color:white;padding:8px 12px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;font-size:0.95rem}
-    .btn.secondary{background:#edf2f7;color:#111}
-    .viewer{flex:1;display:block;width:100%;height:calc(100% - 56px);}
-    @media(print){.topbar{display:none}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado - ATI Paraopeba NACAB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .certificate-container {
+            background: white;
+            max-width: 900px;
+            width: 100%;
+            padding: 60px 80px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            border: 15px solid #f0f0f0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #4CAF50;
+        }
+
+        .logo-text {
+            text-align: left;
+        }
+
+        .logo-text h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .logo-text h1 {
+            color: #333;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .nacab-logo {
+            text-align: right;
+        }
+
+        .nacab-logo h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nacab-logo h1 .green {
+            color: #4CAF50;
+        }
+
+        .nacab-logo p {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .certificate-title {
+            text-align: center;
+            font-size: 48px;
+            color: #4CAF50;
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .certificate-content {
+            text-align: center;
+            font-size: 20px;
+            line-height: 2;
+            color: #333;
+            margin-bottom: 60px;
+        }
+
+        .certificate-content p {
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding: 0 10px;
+            display: inline-block;
+            min-width: 300px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+        }
+
+        .signature-line {
+            width: 300px;
+            margin: 40px auto 10px;
+            border-top: 2px solid #333;
+        }
+
+        .signature-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .certificate-container {
+                box-shadow: none;
+                border: 2px solid #333;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .certificate-container {
+                padding: 40px 30px;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-text, .nacab-logo {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .certificate-title {
+                font-size: 32px;
+            }
+
+            .certificate-content {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="holder">
-    <div class="topbar" role="toolbar">
-      <a class="btn" id="openPdf" href="Apresentação.pdf" target="_blank" rel="noopener">Abrir PDF original</a>
-      <a class="btn secondary" id="downloadPdf" href="Apresentação.pdf" download>Baixar</a>
-      <button class="btn secondary" onclick="window.print()">Imprimir</button>
+    <div class="certificate-container">
+        <div class="header">
+            <div class="logo-text">
+                <h2>Assessoria</h2>
+                <h2>Técnica</h2>
+                <h2>Independente</h2>
+                <h1>PARAOPEBA</h1>
+            </div>
+            <div class="nacab-logo">
+                <h1>NAC<span class="green">A</span>B</h1>
+                <p>NÚCLEO DE ASSESSORIA<br>ÀS COMUNIDADES ATINGIDAS<br>POR BARRAGENS</p>
+            </div>
+        </div>
+
+        <div class="certificate-title">
+            CERTIFICADO
+        </div>
+
+        <div class="certificate-content">
+            <p>Certificamos que</p>
+            <p class="highlight">&nbsp;</p>
+            <p>participou das <strong>Rodadas Comunitárias: treinamento para priorização de danos e proposição de projetos</strong>, realizado pela ATI Paraopeba NACAB.</p>
+        </div>
+
+        <div class="footer">
+            <p>Belo Horizonte, <span class="highlight" style="min-width: 200px;">&nbsp;</span></p>
+            <div class="signature-line"></div>
+            <p class="signature-text">ATI Paraopeba NACAB</p>
+        </div>
     </div>
 
-    <iframe class="viewer" id="pdfFrame" src="Apresentação.pdf" title="Documento PDF" frameborder="0"></iframe>
-  </div>
-
-  <script>
-    // Página minimalista para exibir o PDF real embutido.
-  </script>
+    <script>
+        // Função para imprimir o certificado
+        window.onload = function() {
+            // Você pode adicionar funcionalidades JavaScript aqui se necessário
+        }
+    </script>
 </body>
 </html>
